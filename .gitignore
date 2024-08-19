@@ -1,1 +1,3 @@
 *.back
+*.md
+!README.md
