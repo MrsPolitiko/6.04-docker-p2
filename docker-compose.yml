@@ -9,7 +9,7 @@ services:
       - 9090:9090
     volumes:
       - ./prometheus:/etc/prometheus
-      - prometheus-data:/prometheus
+      - common-data:/prometheus
     networks:
       - politikoks-my-netology-hw
     restart: always
@@ -31,12 +31,12 @@ services:
     image: grafana/grafana
     container_name: politikoks-netology-grafana
     environment:
-      GF_PATH_CONFIG: /etc/grafana/custom.ini
+      GF_PATH_CONFIG: /etc/grafana/grafana.ini
     ports:
       - 80:3000
     volumes:
-      - ./grafana:/etc/grafana
-      - grafana-data:/var/lib/grafana
+      - './grafana:/etc/grafana'
+      - common-data:/var/lib/grafana
     networks:
       - politikoks-my-netology-hw
     depends_on:
@@ -44,8 +44,8 @@ services:
     restart: always
 
 volumes:
-  prometheus-data:
-
+  common-data:
+  
 networks:
   politikoks-my-netology-hw:
     driver: bridge
