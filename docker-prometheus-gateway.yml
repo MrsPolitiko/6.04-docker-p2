@@ -1,4 +1,4 @@
-# *Задание 3*
+# *Задание 4*
 services:
   # Запуск PROMETHEUS
   prometheus:
@@ -8,12 +8,24 @@ services:
     ports:
       - 9090:9090
     volumes:
-      - './prometheus:/etc/prometheus'
+      - ./prometheus:/etc/prometheus
       - prometheus-data:/prometheus
     networks:
       - politikoks-my-netology-hw
     restart: always
 
+  # Запуск PUSHGATEWAY
+  pushgateway:
+    image: prom/pushgateway:v1.6.2
+    container_name: pushgateway
+    ports:
+      - 9091:9091
+    networks:
+      - politikoks-my-netology-hw
+    depends_on:
+      - prometheus
+    restart: unless-stopped
+  
 volumes:
   prometheus-data:
 
