@@ -8,19 +8,19 @@
 ---
 ### Задание 2
 
-![Файл с первичными настройками](https://github.com/MrsPolitiko/6.04-docker-p2/blob/main/docker-compose-template.yml)
+[Файл с первичными настройками](https://github.com/MrsPolitiko/6.04-docker-p2/blob/main/docker-compose-template.yml)
 
 ---
 ### Задание 3
-![Файл с настройками Prometeus](https://github.com/MrsPolitiko/6.04-docker-p2/blob/main/docker-prometheus.yml)
+[Файл с настройками Prometeus](https://github.com/MrsPolitiko/6.04-docker-p2/blob/main/docker-prometheus.yml)
 
 ---
 ### Задание 4
-![Файл с настройками Prometeus + Pushgateway](https://github.com/MrsPolitiko/6.04-docker-p2/blob/main/docker-prometheus-gateway.yml)
+[Файл с настройками Prometeus + Pushgateway](https://github.com/MrsPolitiko/6.04-docker-p2/blob/main/docker-prometheus-gateway.yml)
 
 ---
 ### Задание 5
-![Файл с настройками Grafana](https://github.com/MrsPolitiko/6.04-docker-p2/blob/main/docker-grafana.yml)
+[Файл с настройками Grafana](https://github.com/MrsPolitiko/6.04-docker-p2/blob/main/docker-grafana.yml)
 
 ---
 ### Задание 6
@@ -37,7 +37,7 @@ Yml файл называется немного иначе, мне было т�
 ```
 for i in {1..100}; do echo "politikoks" $(( 1 + $RANDOM % 100  )) |curl --data-binary @- http://localhost:9091/metrics/job/netology && sleep 1s;  done
 ```
-[скриншот команды docker ps после запуска docker-prometheus-gateway-grafana.yml](https://github.com/MrsPolitiko/6.04-docker-p2/docker-prometheus-gateway-grafana.yml)
+[скриншот команды docker ps после запуска docker-prometheus-gateway-grafana.yml](https://github.com/MrsPolitiko/6.04-docker-p2/blob/main/img/task_7_1.png)
 
 [скриншот графика, постоенного на основе вашей метрики](https://github.com/MrsPolitiko/6.04-docker-p2/blob/main/img/task_7.png)
 
